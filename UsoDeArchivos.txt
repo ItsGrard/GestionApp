@@ -1,0 +1,6 @@
+La idea de esto es poner quien esta haciendo qué para evitar conflictos (que no haya dos personas tocando el mismo archivo a la vez)
+
+VistaUsuario.fxml -> Marco
+Login.fxml -> Jesus
+VistaProfesorMain.fxml -> Gerardo
+VistaEmpresaMain.fxml -> Ridouan
