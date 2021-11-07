@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2021 a las 13:38:24
+-- Tiempo de generación: 07-11-2021 a las 17:48:23
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -32,8 +32,8 @@ CREATE TABLE `actividades` (
   `nombre` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
   `horas_dia` int(11) NOT NULL,
-  `tipo_practica` varchar(50) NOT NULL,
-  `observaciones` text NOT NULL,
+  `tipo_practica` varchar(50) DEFAULT NULL,
+  `observaciones` text DEFAULT NULL,
   `alumno_dni` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -47,11 +47,11 @@ CREATE TABLE `alumno` (
   `dni` varchar(9) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
-  `telefono` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `telefono` int(11) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `fecha_nacimiento` date NOT NULL,
   `clave` varchar(50) NOT NULL,
-  `observaciones` text NOT NULL,
+  `observaciones` text DEFAULT NULL,
   `tutor_nombre` varchar(50) NOT NULL,
   `empresa_nombre` varchar(50) NOT NULL,
   `horas_dual` int(11) NOT NULL,
@@ -69,24 +69,11 @@ CREATE TABLE `alumno` (
 CREATE TABLE `empresa` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `telefono` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `telefono` int(11) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `responsable` varchar(50) NOT NULL,
-  `observaciones` text NOT NULL
+  `observaciones` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `empresa`
---
-
-INSERT INTO `empresa` (`id`, `nombre`, `telefono`, `email`, `responsable`, `observaciones`) VALUES
-(1, 'Apple Inc.', 987456321, 'apple@apple.com', 'Steve Mcwin', ''),
-(2, 'Microsoft', 963258741, 'microsoft@microsoft.com', 'Barry Allen', ''),
-(3, 'Amazon Inc.', 951236874, 'amazon@amazon.com', 'Bubba Gam', ''),
-(4, 'Facebook', 915264783, 'facebook@facebook.com', 'Marc Wallberg', ''),
-(5, 'Alibaba Group', 982134765, 'alibaba@group.com', 'Son Guijun', ''),
-(6, 'Nvidia', 932145687, 'nvidia@nvidia.com', 'Margareth Tatcher', ''),
-(7, 'Samsung', 962358741, 'samsung@samsung.com', 'Park Ji-sung', '');
 
 -- --------------------------------------------------------
 
@@ -98,19 +85,9 @@ CREATE TABLE `profesor` (
   `dni` varchar(9) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `clave` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `profesor`
---
-
-INSERT INTO `profesor` (`dni`, `nombre`, `apellidos`, `email`, `clave`) VALUES
-('12345678J', 'Javier', 'Gómez Artacho', 'javiergomez@cesurformacion.com', ''),
-('14785236L', 'Jose Antonio', 'Lara Sanchez', 'joseantonio@cesurformacion.com', ''),
-('60254789P', 'Francisco ', 'Romero Guillén', 'franciscoromero@cesurformacion.com', ''),
-('98765432F', 'Emilia', 'Pauna', 'emiliapauna@cesurformacion.com', '');
 
 --
 -- Índices para tablas volcadas
@@ -157,7 +134,7 @@ ALTER TABLE `actividades`
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
