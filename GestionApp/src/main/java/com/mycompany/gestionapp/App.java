@@ -18,9 +18,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         //Para programar vuestra vista y ver resultados teneis que cambiar aqui el nombre
-        scene = new Scene(loadFXML("loginVista"), 343, 536); 
+        scene = new Scene(loadFXML("loginVista"), 1680, 800); 
         stage.setScene(scene);
-        stage.setFullScreen(true); // Método para poner la ventana en fullScreen
         stage.show();
         
         //Listener para controlar que el usuario no reduzca la anchura menor a 343px

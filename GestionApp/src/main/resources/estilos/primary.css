@@ -5,6 +5,12 @@
     -fx-text-fill: black;
     -fx-font-weight:700;
 }
+
+.etiquetasTablas{
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New";
+    -fx-text-fill: black;
+}
 /*Este estilo modifica el campo texto del login*/
 .campoTexto{
     -fx-font-size: 14px;
@@ -28,6 +34,19 @@
     -fx-background-color:#59abf7;
     -fx-background-radius: 2;
     -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, 0, 0, 0 );
+    
+}
+
+.botonInsertarAlumno{
+    -fx-background-color:#59abf7;
+    -fx-background-radius: 2;
+    -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, 0, 0, 0 );
+    -fx-background-color:#f9c96a;
+    -fx-font-size: 18px;
+    -fx-font-family: "Courier New";
+    -fx-text-fill: black;
+    -fx-font-weight:800;
+    
 }
 
 
@@ -36,3 +55,10 @@
     -fx-background-image:url(../imagenes/fondo.jpg);
     -fx-background-size:cover;
 }
+
+.fondoProfesor{
+    -fx-background-image:url(../imagenes/fondoAzul.png);
+    -fx-background-size:cover;
+    -fx-background-opacity:0.5;
+}
+

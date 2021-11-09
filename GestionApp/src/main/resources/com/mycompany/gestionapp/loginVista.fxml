@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="536.0" prefWidth="343.0" spacing="20.0" styleClass="fondoPrimary" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.LoginController">
+<VBox alignment="TOP_CENTER" prefHeight="670.0" prefWidth="446.0" spacing="20.0" styleClass="fondoPrimary" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.LoginController">
    <children>
       <FlowPane alignment="TOP_RIGHT">
          <children>

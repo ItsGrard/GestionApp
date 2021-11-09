@@ -38,7 +38,7 @@ public class Empresa implements Serializable {
         this.id = id;
     }
 
-    public String getnombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -80,8 +80,7 @@ public class Empresa implements Serializable {
 
     @Override
     public String toString() {
-        return "Empresa{" + "id=" + id + ", gnombre=" + nombre + ", telefono=" + telefono 
-                + ", email=" + email + ", responsable=" + responsable + ", observaciones=" + observaciones + '}';
+        return nombre;
     }
 
 }

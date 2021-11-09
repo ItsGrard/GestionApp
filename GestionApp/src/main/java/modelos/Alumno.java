@@ -39,6 +39,7 @@ public class Alumno implements Serializable {
     @Column(name = "horas_fct")
     private int horasFCT;
     
+    
     //Relacion N:1 (Muchos alumnos tiene asignada una unica empresa)
     @ManyToOne
     @JoinColumn(name = "empresa_id")
@@ -48,8 +49,17 @@ public class Alumno implements Serializable {
     @ManyToOne
     @JoinColumn(name = "profesor_id")
     private Profesor profesor;
+
     
     public Alumno() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDni() {
@@ -132,13 +142,34 @@ public class Alumno implements Serializable {
         this.horasFCT = horasFCT;
     }
 
-    @Override
-    public String toString() {
-        return "Alumno{" + "id=" + id + ", dni=" + dni + ", nombre=" + nombre 
-                + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" 
-                + email + ", fechaNacimiento=" + fechaNacimiento + ", clave=" + clave 
-                + ", observaciones=" + observaciones + ", horasDual=" + horasDual + ", horasFCT=" 
-                + horasFCT + ", empresa=" + empresa.getnombre() + ", profesor=" + profesor.getNombre() + '}';
+    public Empresa getEmpresa() {
+        return empresa;
     }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
+
+   
+
+    
+   
+
+//    @Override
+//    public String toString() {
+//        return "Alumno{" + "id=" + id + ", dni=" + dni + ", nombre=" + nombre 
+//                + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" 
+//                + email + ", fechaNacimiento=" + fechaNacimiento + ", clave=" + clave 
+//                + ", observaciones=" + observaciones + ", horasDual=" + horasDual + ", horasFCT=" 
+//                + horasFCT + ", empresa=" + empresa.getNombre() + ", profesor=" + profesor.getNombre() + '}';
+//    }
 
 }
