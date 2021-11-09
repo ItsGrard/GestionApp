@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="502.0" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ActividadesVistaController">
+   <children>
+      <Label styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="TABLA DE ACTIVIDADES" />
+   </children>
+</VBox>
