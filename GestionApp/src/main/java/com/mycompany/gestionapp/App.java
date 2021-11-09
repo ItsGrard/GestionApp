@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 343, 536);
+        scene = new Scene(loadFXML("loginVista"), 343, 536);
         stage.setScene(scene);
         stage.setFullScreen(true); // Método para poner la ventana en fullScreen
         stage.show();

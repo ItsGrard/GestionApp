@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ProfesorController">
+   <children>
+      <ImageView fitHeight="43.0" fitWidth="41.0" onMouseClicked="#logOutProfesor" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../../imagenes/logout.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label prefHeight="41.0" prefWidth="197.0" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="TABLA DE PROFESORES" />
+   </children>
+</VBox>
