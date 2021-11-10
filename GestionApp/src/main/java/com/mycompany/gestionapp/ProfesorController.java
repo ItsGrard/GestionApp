@@ -114,6 +114,7 @@ public class ProfesorController implements Initializable {
         listarAlumnos();
         inicializarComboBoxEmpresas();
         inicializarComboBoxProfesores();
+        detectarClickMouse();
         
 
     }
