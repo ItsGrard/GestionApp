@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -22,6 +25,7 @@ import org.hibernate.query.Query;
 
 public class LoginController implements Initializable {
 
+    public static String whoIs = null; //Variable global para guardar el usuario
     @FXML
     private Label labelUsuario;
     @FXML
@@ -46,6 +50,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
+    //Este es la imagen de la esquina superior derecha para salir de la APP
     private void btnSalir(MouseEvent event) {
         //A través de la imagen cojo y le asigno a la variable la ventana donde esta situada
         Stage ventana = (Stage) imgSalir.getScene().getWindow();
@@ -75,10 +80,12 @@ public class LoginController implements Initializable {
         //Comprobamos si los datos obtenidos se encuentran en la base de datos.
         if (!alumnos.isEmpty()) {
             try {
+                //Guarda en la variable global whoIs el usuario ingresado.(Para diseños en las vistas)
+                whoIs = "ALUMNO: " + txtUsuario.getText().toUpperCase();
                 //Cambiamos a la vista de usuarios en el caso de que haga login un usuario
                 App.setRoot("usuarioVista");
             } catch (IOException ex) {
-                System.out.println("Error al intentar acceder a usuarioVista.fxml "+ex);
+                System.out.println("Error al intentar acceder a usuarioVista.fxml " + ex);
             }
         } else {
             Query queryProfesor = s.createQuery("FROM Profesor p WHERE p.nombre =?1 and p.clave =?2");
@@ -87,14 +94,21 @@ public class LoginController implements Initializable {
             ArrayList<Profesor> profesores = (ArrayList<Profesor>) queryProfesor.list();
             if (!profesores.isEmpty()) {
                 try {
+                    whoIs = "PROFESOR: " + txtUsuario.getText().toUpperCase();
                     //Cambiamos a la vista de Profesores en el caso de que haga login un profesor
                     App.setRoot("profesorVista");
                 } catch (IOException ex) {
-                    System.out.println("Error al intentar acceder a profesorVista.fxml "+ex);
+                    System.out.println("Error al intentar acceder a profesorVista.fxml " + ex);
                 }
-                
+
             } else {
-                System.out.println("Tu usuario o contraseña son erroneos");
+                //En el caso de que no se encuentre nada en las dos tablas, entonces saldra un ALERT
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("Error al iniciar sesión");
+                alert.setContentText("El usuario o la constraseña son erroneos");
+                ButtonType valeButton = new ButtonType("Vale", ButtonBar.ButtonData.YES);
+                alert.show();
             }
         }
 
