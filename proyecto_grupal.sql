@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2021 a las 01:52:08
+-- Tiempo de generación: 11-11-2021 a las 10:37:01
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.11
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,7 +71,7 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `dni`, `nombre`, `apellidos`, `fecha_nacimiento`, `telefono`, `email`, `clave`, `horas_dual`, `horas_fct`, `observaciones`, `empresa_id`, `profesor_id`) VALUES
-(1, '', 'jesus', 'ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2);
+(1, '77190622T', 'jesus', 'ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -115,7 +115,8 @@ CREATE TABLE `profesor` (
 --
 
 INSERT INTO `profesor` (`id`, `dni`, `nombre`, `apellidos`, `email`, `clave`) VALUES
-(2, '77190623T', 'Francisco', 'Gonzalez', 'francisco@gmail.com', 'francisco');
+(2, '77190623T', 'Francisco', 'Gonzalez', 'francisco@gmail.com', 'francisco'),
+(3, '33359125V', 'jose', 'Marquez', 'jose@gmail.com', 'jose');
 
 --
 -- Índices para tablas volcadas
@@ -162,19 +163,19 @@ ALTER TABLE `actividades`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
