@@ -42,7 +42,7 @@ public class Empresa implements Serializable {
         return nombre;
     }
 
-    public void setnombre(String gnombre) {
+    public void setNombre(String gnombre) {
         this.nombre = gnombre;
     }
 

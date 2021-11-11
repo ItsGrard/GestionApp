@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -26,6 +25,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import modelos.Alumno;
 import modelos.Empresa;
@@ -34,7 +34,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class ProfesorController implements Initializable {
+public class ProfesorAlumnoController implements Initializable {
 
     @FXML
     private Label labelNombreProfesor;
@@ -92,6 +92,8 @@ public class ProfesorController implements Initializable {
     private ComboBox<Empresa> comboEmpresa;
     @FXML
     private ComboBox<Profesor> comboProfesor;
+    @FXML
+    private ImageView imgEmpresa;
 
     private void switchToPrimary() throws IOException {
         App.setRoot("LoginController");
@@ -284,6 +286,16 @@ public class ProfesorController implements Initializable {
     private void agregarAlumno(MouseEvent event) {
         insertarAlumno();
         listarAlumnos();
+    }
+
+    @FXML
+    private void irAdministracionEmpresas(MouseEvent event) {
+        try {
+            //Cambia de vista al hacer clic en la imagen de LOG-OUT
+            App.setRoot("profesorEmpresaVista");
+        } catch (IOException ex) {
+            System.out.println("Error al acceder al documento loginVista.fxml " + ex);;
+        }
     }
 
 }

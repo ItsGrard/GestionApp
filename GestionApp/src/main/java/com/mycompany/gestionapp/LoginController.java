@@ -96,7 +96,7 @@ public class LoginController implements Initializable {
                 try {
                     whoIs = "PROFESOR: " + txtUsuario.getText().toUpperCase();
                     //Cambiamos a la vista de Profesores en el caso de que haga login un profesor
-                    App.setRoot("profesorVista");
+                    App.setRoot("profesorAlumnoVista");
                 } catch (IOException ex) {
                     System.out.println("Error al intentar acceder a profesorVista.fxml " + ex);
                 }

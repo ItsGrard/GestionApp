@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="664.0" prefWidth="1350.0" styleClass="fondoProfesor" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ProfesorController">
+<VBox alignment="TOP_CENTER" prefHeight="664.0" prefWidth="1350.0" styleClass="fondoProfesor" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ProfesorAlumnoController">
    <children>
       <GridPane alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="934.0">
          <VBox.margin>
@@ -51,7 +51,7 @@
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <ImageView fitHeight="41.0" fitWidth="87.0" onMouseClicked="#logOutProfesor" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fitHeight="46.0" fitWidth="55.0" onMouseClicked="#logOutProfesor" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../../../imagenes/logout.png" />
                </image>
@@ -61,6 +61,17 @@
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="imgEmpresa" fitHeight="46.0" fitWidth="55.0" onMouseClicked="#irAdministracionEmpresas" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="100.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../../imagenes/empresa.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
       </GridPane>
