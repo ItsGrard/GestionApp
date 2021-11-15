@@ -14,7 +14,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         //Para programar vuestra vista y ver resultados teneis que cambiar aqui el nombre
-        scene = new Scene(loadFXML("loginVista"), 1680, 750); 
+        scene = new Scene(loadFXML("loginVista"), 1680, 750);
         stage.setScene(scene);
         stage.show();
         

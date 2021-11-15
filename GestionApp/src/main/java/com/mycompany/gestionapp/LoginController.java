@@ -83,7 +83,7 @@ public class LoginController implements Initializable {
                 //Guarda en la variable global whoIs el usuario ingresado.(Para diseños en las vistas)
                 whoIs = "ALUMNO: " + txtUsuario.getText().toUpperCase();
                 //Cambiamos a la vista de usuarios en el caso de que haga login un usuario
-                App.setRoot("usuarioVista");
+                App.setRoot("alumnoVista");
             } catch (IOException ex) {
                 System.out.println("Error al intentar acceder a usuarioVista.fxml " + ex);
             }

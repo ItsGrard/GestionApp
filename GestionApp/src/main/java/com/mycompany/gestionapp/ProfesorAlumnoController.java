@@ -36,35 +36,24 @@ import org.hibernate.query.Query;
 
 public class ProfesorAlumnoController implements Initializable {
 
-    @FXML
     private Label labelNombreProfesor;
-    @FXML
     private TextField txtNombre;
-    @FXML
     private TextField txtApellidos;
-    @FXML
     private TextField txtDNI;
-    @FXML
     private TextField txtEmail;
-    @FXML
     private TextField txtTelefono;
-    @FXML
     private TextField txtHorasDuales;
-    @FXML
     private TextField txtHorasFCT;
     @FXML
     private TextArea txtObservaciones;
     @FXML
     private Button btnAgregar;
-    @FXML
     private TableView<Alumno> tablaAlumnos;
     @FXML
     private TableColumn<Alumno, Long> colId;
-    @FXML
     private TableColumn<Alumno, String> colDNI;
     @FXML
     private TableColumn<Alumno, String> colNombre;
-    @FXML
     private TableColumn<Alumno, String> colApellidos;
     @FXML
     private TableColumn<Alumno, Date> colNacimiento;
@@ -74,26 +63,29 @@ public class ProfesorAlumnoController implements Initializable {
     private TableColumn<Alumno, String> colEmail;
     @FXML
     private TableColumn<Alumno, String> colClave;
-    @FXML
     private TableColumn<Alumno, Integer> colHorasDual;
-    @FXML
     private TableColumn<Alumno, Integer> colHorasFCT;
-    @FXML
     private TableColumn<Alumno, Integer> colEmpresa;
-    @FXML
     private TableColumn<Alumno, Integer> colProfesor;
-    @FXML
     private TableColumn<Alumno, String> colObservaciones;
-    @FXML
     private TextField txtClave;
-    @FXML
     private DatePicker datePickerNacimiento;
-    @FXML
     private ComboBox<Empresa> comboEmpresa;
-    @FXML
     private ComboBox<Profesor> comboProfesor;
     @FXML
-    private ImageView imgEmpresa;
+    private Label labelNombreAlumno;
+    @FXML
+    private ImageView btnSalir;
+    @FXML
+    private TextField txtHorasTotales;
+    @FXML
+    private TextField txtTipoPractica;
+    @FXML
+    private DatePicker datePickerFecha;
+    @FXML
+    private TextArea txtActividad;
+    @FXML
+    private TableView<?> tablaActividades;
 
     private void switchToPrimary() throws IOException {
         App.setRoot("LoginController");
@@ -288,7 +280,6 @@ public class ProfesorAlumnoController implements Initializable {
         listarAlumnos();
     }
 
-    @FXML
     private void irAdministracionEmpresas(MouseEvent event) {
         try {
             //Cambia de vista al hacer clic en la imagen de LOG-OUT
