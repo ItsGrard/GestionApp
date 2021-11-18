@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="664.0" prefWidth="1350.0" styleClass="fondoProfesor" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ProfesorAlumnoController">
+<VBox alignment="TOP_CENTER" prefHeight="664.0" prefWidth="1350.0" styleClass="fondoProfesor" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.AlumnoController">
    <children>
       <GridPane alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="934.0">
          <VBox.margin>
