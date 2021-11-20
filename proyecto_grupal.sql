@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-11-2021 a las 11:16:26
+-- Tiempo de generación: 20-11-2021 a las 18:09:17
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Versión de PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -72,8 +72,25 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `dni`, `nombre`, `apellidos`, `fecha_nacimiento`, `telefono`, `email`, `clave`, `horas_dual`, `horas_fct`, `observaciones`, `empresa_id`, `profesor_id`) VALUES
-(1, '77190622T', 'jesus', 'ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2),
-(9, '77190669K', 'NarotaSan', 'Melero', '2021-11-22', 603504523, 'naroa@gmail.com', 'narotasan', 25, 63, 'Es una chica responsable.', 2, 3);
+(1, '77190622T', 'Jesus', 'Ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2),
+(2, '12345678J', 'Alberto ', 'Naranjo Nuñez', '2001-11-14', 987456321, 'alberto@cesurformacion.com', 'alberto', 0, 0, 'Alumno con gran proyección', 11, 4),
+(3, '60254789P', 'Alejandro', 'Vicente', '2002-11-13', 625852146, 'alejandro@cesurformacion.com', 'alejandro', 10, 0, 'Alumno con capacidad creativa. ', 9, 2),
+(4, '32216554B', 'Alejandro', 'Trujillo', '2001-11-11', 652201478, 'trujillo@cesurformacion.com', 'trujillo', 10, 0, 'Alumno con superpoderes.', 7, 2),
+(5, '88854127C', 'Alejandro', 'Aguilar', '2001-11-03', 663255477, 'aguilar@cesurformacion.com', 'aguilar', 21, 0, 'Alumno constante.', 5, 3),
+(6, '32216589D', 'Carlos', 'Fortes', '2001-11-24', 655598888, 'carlos@cesurformacion.com', 'carlos', 12, 0, 'Alumno con habilidades contextuales', 2, 4),
+(7, '44116688F', 'Christopher', 'Gonzalez', '2000-11-30', 663322558, 'cris@cesurformacion.com', 'cris', 15, 0, 'Alumno con dotes legendarias', 10, 5),
+(8, '78458956G', 'Daniel', 'Mena', '2001-11-01', 658985471, 'daniel@cesurformación.com', 'daniel', 10, 0, 'Alumno atento', 11, 3),
+(9, '89784589H', 'David', 'Gonzalez', '2002-11-06', 662233551, 'david@cesurformacion.com', 'david', 15, 0, 'Alumno creativo', 8, 2),
+(10, '55228877J', 'David', 'Ramos', '2001-12-13', 661224883, 'ramos@cesurformación.com', 'ramos', 10, 0, 'Alumno muy querido', 11, 3),
+(11, '12124578K', 'Diego', 'Gaitán', '1996-11-15', 656544789, 'diego@cesurformacion.com', 'diego', 45, 1, 'Alumno que tira para adelante', 9, 5),
+(12, '89455645L', 'Gerardo', 'Marín', '2021-11-13', 655465548, 'gerardo@cesurformación.com', 'gerardo', 15, 0, 'Alumno muy puntual', 7, 5),
+(13, '562361245L', 'Guillermo', 'Castillo', '2001-11-01', 639528417, 'guillermo@cesurformacion.com', 'guillermo', 15, 0, 'Alumno con gran vocabulario léxico', 11, 4),
+(14, '12234556Ñ', 'Juan', 'Lamas', '2000-11-23', 654321987, 'juan@cesurformación.com', 'juan', 15, 0, 'Alumno constante', 9, 2),
+(15, '12457896P', 'Robbe', 'Toichoa', '1997-11-07', 645978312, 'robbe@cesurformacion.com', 'robbe', 15, 0, 'Alumno muy aplicado', 7, 3),
+(16, '123741852O', 'Marco', 'Testa', '2001-05-17', 654123789, 'marco@cesurformación.com', 'marco', 15, 0, 'Alumno internacional', 10, 4),
+(17, '145256325O', 'Pablo', 'Hierrezuelo', '1996-04-11', 623512012, 'pablo@cesurformacion.com', 'pablo', 48, 0, 'Alumno multitarea', 8, 5),
+(18, '124578014U', 'Ridouan ', 'Tieb', '1989-04-28', 654103321, 'tieb@cesurformación.com', 'tieb', 12, 0, 'Alumno con experiencia', 9, 2),
+(19, '147852145Y', 'Roberto', 'García', '2001-11-15', 654789874, 'roberto@cesurformacion.com', 'roberto', 14, 0, 'Alumno con proyección', 10, 2);
 
 -- --------------------------------------------------------
 
@@ -96,7 +113,12 @@ CREATE TABLE `empresa` (
 
 INSERT INTO `empresa` (`id`, `nombre`, `telefono`, `email`, `responsable`, `observaciones`) VALUES
 (2, 'Cabsan', 603504535, 'cabsan@gmail.com', 'Luis', 'Jefe de la empresa'),
-(5, 'Aquila', 632548785, 'aquila@gmail.com', 'Ramon', 'Empresa en condiciones de contratar alumnos');
+(5, 'Aquila', 632548785, 'aquila@gmail.com', 'Ramon', 'Empresa en condiciones de contratar alumnos'),
+(7, 'Apple Inc.', 987456321, 'apple@apple.com', 'Steve Mcwin', 'Gran tecnológica '),
+(8, 'Microsoft', 963258741, 'microsoft@microsoft.com', 'Barry Allen', 'Expandiéndose en España'),
+(9, 'Amazon Inc.', 962358741, 'amazon@amazon.com', 'Son Guijun', 'En tiempo de contrataciones'),
+(10, 'Facebook', 932145687, 'facebook@facebook.com', 'Marc Wallberg', 'Metaverse project en curso, necesidad de empleabilidad'),
+(11, 'Alibaba Group', 951236874, 'alibaba@group.com', 'Park Ji-sung', 'Abierto a nuevas propuestas de negocio');
 
 -- --------------------------------------------------------
 
@@ -118,8 +140,10 @@ CREATE TABLE `profesor` (
 --
 
 INSERT INTO `profesor` (`id`, `dni`, `nombre`, `apellidos`, `email`, `clave`) VALUES
-(2, '77190623T', 'Francisco', 'Gonzalez', 'francisco@gmail.com', 'francisco'),
-(3, '33359125V', 'jose', 'Marquez', 'jose@gmail.com', 'jose');
+(2, '77190623T', 'Francisco', 'Gonzalez', 'francisco@cesur.com', 'francisco'),
+(3, '33359125V', 'Jose', 'Marquez', 'jose@cesur.com', 'jose'),
+(4, '78894556A', 'Emilia ', 'Pauna', 'emilia@cesur.com', 'emilia'),
+(5, '32216554B', 'Javier ', 'Artacho', 'javier@cesur.com', 'javier');
 
 --
 -- Índices para tablas volcadas
@@ -166,19 +190,19 @@ ALTER TABLE `actividades`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
