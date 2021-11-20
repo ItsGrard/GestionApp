@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2021 a las 10:37:01
+-- Tiempo de generación: 20-11-2021 a las 11:16:26
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -32,7 +32,6 @@ CREATE TABLE `actividades` (
   `nombre` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
   `horas_dia` int(11) NOT NULL,
-  `tipo_practica` varchar(50) DEFAULT NULL,
   `observaciones` text DEFAULT NULL,
   `alumno_id` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,8 +40,10 @@ CREATE TABLE `actividades` (
 -- Volcado de datos para la tabla `actividades`
 --
 
-INSERT INTO `actividades` (`id`, `nombre`, `fecha`, `horas_dia`, `tipo_practica`, `observaciones`, `alumno_id`) VALUES
-(1, 'Proyecto grupal', '2021-11-23', 2, 'Practica en grupo', 'Entregar antes de la fecha máxima.', 1);
+INSERT INTO `actividades` (`id`, `nombre`, `fecha`, `horas_dia`, `observaciones`, `alumno_id`) VALUES
+(1, 'Proyecto grupal', '2021-11-23', 2, 'Entregar antes de la fecha máxima.', 1),
+(3, 'Realizar views en SnowFlake', '2021-11-20', 8, 'Realizar Views para que la empresa consulte las tablas mas rapido.', 1),
+(6, 'nueva', '2021-11-20', 8, 'Nueva actividad', 1);
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,8 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `dni`, `nombre`, `apellidos`, `fecha_nacimiento`, `telefono`, `email`, `clave`, `horas_dual`, `horas_fct`, `observaciones`, `empresa_id`, `profesor_id`) VALUES
-(1, '77190622T', 'jesus', 'ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2);
+(1, '77190622T', 'jesus', 'ariza', '1995-01-22', 603548632, 'jmoisesariza@gmail.com', 'jesus', 2000, 410, 'Miembro de la javaSquad', 2, 2),
+(9, '77190669K', 'NarotaSan', 'Melero', '2021-11-22', 603504523, 'naroa@gmail.com', 'narotasan', 25, 63, 'Es una chica responsable.', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,8 @@ CREATE TABLE `empresa` (
 --
 
 INSERT INTO `empresa` (`id`, `nombre`, `telefono`, `email`, `responsable`, `observaciones`) VALUES
-(2, 'Cabsan', 603504535, 'cabsan@gmail.com', 'Luis', 'Jefe de la empresa');
+(2, 'Cabsan', 603504535, 'cabsan@gmail.com', 'Luis', 'Jefe de la empresa'),
+(5, 'Aquila', 632548785, 'aquila@gmail.com', 'Ramon', 'Empresa en condiciones de contratar alumnos');
 
 -- --------------------------------------------------------
 
@@ -157,19 +160,19 @@ ALTER TABLE `profesor`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`
